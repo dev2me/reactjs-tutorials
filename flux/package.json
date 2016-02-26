@@ -1,0 +1,8 @@
+{
+  "name": "ejemplo-flux",
+  "devDependencies": {
+    "jquery": "^2.2.1",
+    "react": "^0.14.7",
+    "reflux": "^0.3.0"
+  }
+}
