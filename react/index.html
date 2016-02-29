@@ -6,19 +6,40 @@
 	<script src="build/react.js"></script>
 	<script src="build/react-dom.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+	<style>
+		body{
+			font-family: Arial;
+			font-size: 16px;
+		}
+		#area{
+			color: red;
+			background: #000;
+			padding: 1em;
+		}
+	</style>
 </head>
 	<body>
 		<div id="area"></div>
-		<script type="text/babel">
-					var HelloWorld = React.createClass({
+		<script type="text/babel">	
+					//Componente de encabezado 
+					var Header = React.createClass({
 					render: function() {
 						return  (
-							<h1>Hello World</h1>
+							<header>Hello {this.props.name}</header>
 						)
 					}
 				});
+				//Componente para los titulos
+				var Title = React.createClass({
+					render: function() { 
+						return (
+							<h1>EcoTechnologic</h1>
+						)
+						}
+					});	
+
 				ReactDOM.render(
-					<HelloWorld />,
+					<Header name="Scott"/>,
 				document.getElementById('area')
 				);
 		</script>
